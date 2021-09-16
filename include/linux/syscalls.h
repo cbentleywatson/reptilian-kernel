@@ -1296,5 +1296,27 @@ static inline unsigned int ksys_personality(unsigned int personality)
 
 	return old;
 }
-
+// Keys to mark this file for search :
+//	 searchKey:sycalls.h
+//	 cbent_syscalls.h
+//	 P1_2021
+//   syscall_definitions
+//
+// Notes:
+//
+//  1. From Rubric : "To log a message the syscall must be 'syscall(PROC_LOG_CALL, msg, level)' ."
+//
+//	2. It seems like the syscalls can have any name because the "retrieve_set_level_params()" and "retrieve_get_level_params()"
+//	functions will pass whatever name is needed up to the test functions before the syscall is accessed directly in testing.
+//
+// Explanation of Code:
+// 	 1. syscalls.h contains the definitions for syscall functions
+//   2. "asmlinkage" key word tells the system that these functions will find their parameters on the stack 
+//
+// Changes 9/16/21 13:40
+asmlinkage int set_global_process_log_level_syscall(int new_level);
+asmlinkage int read_global_process_log_level_syscall(void);
+asmlinkage int log_a_process_message_syscall(char *message, int level);
+//
+// End of My Changes
 #endif

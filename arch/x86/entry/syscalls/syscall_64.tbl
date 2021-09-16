@@ -343,6 +343,21 @@
 332	common	statx			__x64_sys_statx
 333	common	io_pgetevents		__x64_sys_io_pgetevents
 334	common	rseq			__x64_sys_rseq
+#
+# Search Keys:
+#       syscall_Numbers
+#       kitchenTimer
+#       P1_2021 
+#       Search_Key:syscall_64.tbl
+#
+# Beginning of My Calls:
+#
+335	common	set_global_process_log_level_syscall	__x64_sys_set_global_process_log_level_syscall
+336	common	read_global_process_log_level_syscall	__x64_sys_read_global_process_log_level_syscall
+337	common	log_a_process_message_syscall			__x64_sys_log_a_process_message_syscall
+#
+# End of My Calls
+#
 424	common	pidfd_send_signal	__x64_sys_pidfd_send_signal
 434	common	pidfd_open		__x64_sys_pidfd_open
 
