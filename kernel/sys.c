@@ -151,7 +151,33 @@ int fs_overflowgid = DEFAULT_FS_OVERFLOWGID;
 
 EXPORT_SYMBOL(fs_overflowuid);
 EXPORT_SYMBOL(fs_overflowgid);
-
+//
+//
+// set up
+int Global_Process_Log_Level = 0;
+//
+//335	common	set_global_process_log_level_syscall	__x64_sys_set_global_process_log_level_syscall
+//336	common	read_global_process_log_level_syscall	__x64_sys_read_global_process_log_level_syscall
+//337	common	log_a_process_message_syscall			__x64_sys_log_a_process_message_syscall
+//
+SYSCALL_DEFINE1(set_global_process_log_level_syscall, int, new_level)
+{
+	Global_Process_Log_Level = new_level;
+	return 0;
+}
+//
+SYSCALL_DEFINE0(read_global_process_log_level_syscall)
+{
+	return Global_Process_Log_Level;
+}
+//
+SYSCALL_DEFINE2(log_a_process_message_syscall, char*, message, int, new_Level ){
+	// place holder
+	return 0;
+}
+// End of my changes.
+//
+//
 /*
  * Returns true if current's euid is same as p's uid or euid,
  * or has CAP_SYS_NICE to p's user_ns.

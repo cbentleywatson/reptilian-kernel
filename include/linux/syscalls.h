@@ -1322,6 +1322,6 @@ asmlinkage int log_a_process_message_syscall(char *message, int level);
 // Change 9/17/21 00:27
 //
 // This should just be a standard header file, which means that an ordinary int could work
-//int current_Global_Process_Log_Level = 0;
+// moved to sys.c by euid for system wide 
 // End of My Changes
 #endif
