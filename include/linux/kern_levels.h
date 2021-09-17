@@ -36,4 +36,19 @@
 #define LOGLEVEL_INFO		6	/* informational */
 #define LOGLEVEL_DEBUG		7	/* debug-level messages */
 
+//  Begin Additions:
+//
+//	Changes here represent the numerical values of the levels we're interested in 
+//	It's to avoid having to remember which number is which
+//
+#define PROC_OVERRIDE	0	/* */
+#define PROC_ALERT		1	/* */
+#define PROC_CRITICAL	2	/* */
+#define PROC_ERROR		3	/* */
+#define PROC_WARNING	4	/* */
+#define PROC_NOTICE		5	/* */
+#define PROC_INFO		6	/* */
+#define PROC_DEBUG		7	/* */
+//
+// End of Additions
 #endif

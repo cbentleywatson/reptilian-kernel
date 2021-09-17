@@ -57,6 +57,8 @@
 #include "console_cmdline.h"
 #include "braille.h"
 #include "internal.h"
+// Search Keys:
+// SearchKey:printk.c
 
 int console_printk[4] = {
 	CONSOLE_LOGLEVEL_DEFAULT,	/* console_loglevel */

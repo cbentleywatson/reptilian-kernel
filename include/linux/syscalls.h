@@ -1301,6 +1301,7 @@ static inline unsigned int ksys_personality(unsigned int personality)
 //	 cbent_syscalls.h
 //	 P1_2021
 //   syscall_definitions
+//	 KitchenTimer
 //
 // Notes:
 //
@@ -1318,5 +1319,9 @@ asmlinkage int set_global_process_log_level_syscall(int new_level);
 asmlinkage int read_global_process_log_level_syscall(void);
 asmlinkage int log_a_process_message_syscall(char *message, int level);
 //
+// Change 9/17/21 00:27
+//
+// This should just be a standard header file, which means that an ordinary int could work
+//int current_Global_Process_Log_Level = 0;
 // End of My Changes
 #endif
